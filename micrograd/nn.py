@@ -19,7 +19,7 @@ class Neuron(Gradient):
     def __call__(self, x):
         # Forward pass: compute the output of the neuron
         act = sum((wi * x_i for wi, x_i in zip(self.w, x)), self.b)
-        return act.relu()
+        return act.tanh()
     
     def parameters(self):
         # Return the weights and bias of the neuron
